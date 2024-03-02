@@ -20,7 +20,7 @@
 //otherwise won't work
 
 import java.util.*;
-public class Utility {
+public class Auxiliary {
     //short version of System.out.println
     //contains 4 datatypes in parameter (overloading):
     //string32 - String
@@ -264,40 +264,40 @@ public class Utility {
             //odd check
             switch (c) {
                 case '1':
-                																				res = res + even.charAt(0);
-                																				break;
+                	res = res + even.charAt(0);
+                	break;
                 case '3':
-                																				res = res + even.charAt(1);
-                																				break;
+                	res = res + even.charAt(1);
+                	break;
                 case '5':
-                																				res = res + even.charAt(2);
-                																				break;
+                	res = res + even.charAt(2);
+                	break;
                 case '7':
-                																				res = res + even.charAt(3);
-                																				break;
+                	res = res + even.charAt(3);
+                	break;
                 case '9':
-                																				res = res + even.charAt(4);
-                																				break;
+                	res = res + even.charAt(4);
+                	break;
                 default:
                 break;
             }
             //even check
             switch (c) {
                 case '0':
-                																				res = res + odd.charAt(0);
-                																				break;
+                	res = res + odd.charAt(0);
+                	break;
                 case '2':
-                																				res = res + odd.charAt(1);
-                																				break;
+                	res = res + odd.charAt(1);
+                	break;
                 case '4':
-                																				res = res + odd.charAt(2);
-                																				break;
+                	res = res + odd.charAt(2);
+                	break;
                 case '6':
-                																				res = res + odd.charAt(3);
-                																				break;
+                	res = res + odd.charAt(3);
+                	break;
                 case '8':
-                																				res = res + odd.charAt(4);
-                																				break;
+                	res = res + odd.charAt(4);
+                	break;
                 default:
                 break;
             }
