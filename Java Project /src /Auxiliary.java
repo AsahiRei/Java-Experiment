@@ -20,6 +20,9 @@
 //otherwise won't work
 
 import java.util.*;
+import java.io.*;
+import java.awt.*;
+import javax.swing.*;
 public class Auxiliary {
     //short version of System.out.println
     //contains 4 datatypes in parameter (overloading):
@@ -47,7 +50,10 @@ public class Auxiliary {
     public void println(boolean boolean32) {
         System.out.println(boolean32);
     }
-    
+    public void println() {
+        System.out.println();
+    }
+
     //short version of System.out.print
     //contains 4 datatypes in parameter (overloading):
     //string32 - String
@@ -261,8 +267,8 @@ public class Auxiliary {
         int i = 0;
         while (i < string32.length()){
             char c = string32.charAt(i);
-            //odd check
             switch (c) {
+                //odd check
                 case '1':
                 	res = res + even.charAt(0);
                 	break;
@@ -278,11 +284,7 @@ public class Auxiliary {
                 case '9':
                 	res = res + even.charAt(4);
                 	break;
-                default:
-                break;
-            }
-            //even check
-            switch (c) {
+                //even check
                 case '0':
                 	res = res + odd.charAt(0);
                 	break;
@@ -299,7 +301,6 @@ public class Auxiliary {
                 	res = res + odd.charAt(4);
                 	break;
                 default:
-                break;
             }
             i++;
         }
@@ -316,5 +317,41 @@ public class Auxiliary {
     //get the value
     public int getConvertion() {
         return odd_even_num;
+    }
+
+    //code analyzer
+    //parameter list:
+    //direct: directory of the file
+    //enable: if you want to hide that is not matched to the target
+    public void codeAnalyzer(String direct, boolean enable) {
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(direct));
+            Console input = System.console();
+            if (input == null) {
+                System.out.println("No console available");
+                return;
+            }
+            String target = input.readLine("Input code: ");
+            String line;
+            int i = 0;
+            while ((line = br.readLine()) != null) {
+                if (line.contains(target)) {
+                    System.out.println("Line: " + "<<" + i + ">>" + " is matched to: " + "'" + target + "'");
+                }
+                else {
+                    if (enable == true) {
+                        System.out.print("");
+                        break;
+                    }
+                    else {
+                        System.out.println("Line: " + i + " is not matched to: " + "'" + target + "'");
+                    }
+                }
+                i++;
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
