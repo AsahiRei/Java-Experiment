@@ -354,4 +354,105 @@ public class Auxiliary {
             e.printStackTrace();
         }
     }
+
+    //
+    public void textToBinary(String text) {
+        String temp = "";
+        String binaryList[][] = {
+            {"0100000", "01000001", "01000010"},
+            {"01000011", "01000100", "01000101"},
+            {"01000110", "01000111", "01001000"},
+            {"01001001", "01001010", "01001011"},
+            {"01101100", "01101110", "01101101"},
+            {"01101111", "01110000", "01110001"},
+            {"01110010", "01110011", "01110100"},
+            {"01110101", "01110110", "01110111"},
+            {"01111000", "01111001", "01111010"},
+        };
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            if (c == ' ') {
+                temp = temp + binaryList[0][0] + " ";
+            }
+            if (c == 'A' || c == 'a') {
+                temp = temp + binaryList[0][1] + " ";
+            }
+            if (c == 'B' || c == 'b') {
+                temp = temp + binaryList[0][2] + " ";
+            }
+            if (c == 'C' || c == 'c') {
+                temp = temp + binaryList[1][0] + " ";
+            }
+            if (c == 'D' || c == 'd') {
+                temp = temp + binaryList[1][1] + " ";
+            }
+            if (c == 'E' || c == 'e') {
+                temp = temp + binaryList[1][2] + " ";
+            }
+            if (c == 'F' || c == 'f') {
+                temp = temp + binaryList[2][0] + " ";
+            }
+            if (c == 'G' || c == 'g') {
+                temp = temp + binaryList[2][1] + " ";
+            }
+            if (c == 'H' || c == 'h') {
+                temp = temp + binaryList[2][2] + " ";
+            }
+            if (c == 'I' || c == 'i') {
+                temp = temp + binaryList[3][0] + " ";
+            }
+            if (c == 'J' || c == 'j') {
+                temp = temp + binaryList[3][1] + " ";
+            }
+            if (c == 'K' || c == 'k') {
+                temp = temp + binaryList[3][2] + " ";
+            }
+            if (c == 'L' || c == 'l') {
+                temp = temp + binaryList[4][0] + " ";
+            }
+            if (c == 'N' || c == 'n') {
+                temp = temp + binaryList[4][1] + " ";
+            }
+            if (c == 'M' || c == 'm') {
+                temp = temp + binaryList[4][2] + " ";
+            }
+            if (c == 'O' || c == 'o') {
+                temp = temp + binaryList[4][0] + " ";
+            }
+            if (c == 'P' || c == 'p') {
+                temp = temp + binaryList[4][1] + " ";
+            }
+            if (c == 'Q' || c == 'q') {
+                temp = temp + binaryList[4][2] + " ";
+            }
+            if (c == 'R' || c == 'r') {
+                temp = temp + binaryList[5][0] + " ";
+            }
+            if (c == 'S' || c == 's') {
+                temp = temp + binaryList[5][1] + " ";
+            }
+            if (c == 'T' || c == 't') {
+                temp = temp + binaryList[5][2] + " ";
+            }
+            if (c == 'U' || c == 'u') {
+                temp = temp + binaryList[5][0] + " ";
+            }
+            if (c == 'V' || c == 'v') {
+                temp = temp + binaryList[5][1] + " ";
+            }
+            if (c == 'W' || c == 'w') {
+                temp = temp + binaryList[5][2] + " ";
+            }
+            if (c == 'X' || c == 'x') {
+                temp = temp + binaryList[6][0] + " ";
+            }
+            if (c == 'Y' || c == 'y') {
+                temp = temp + binaryList[6][1] + " ";
+            }
+            if (c == 'Z' || c == 'z') {
+                temp = temp + binaryList[6][2] + " ";
+            }
+        }
+        System.out.println(temp);
+    }
 }
